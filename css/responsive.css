@@ -1,0 +1,637 @@
+/* =========================================
+   Simplifica Social — Responsividade
+   Breakpoints alinhados a Bootstrap / mercado:
+   - mobile:      < 576px
+   - mobile lg:   ≥ 576px
+   - tablet:      ≥ 768px
+   - laptop:      ≥ 992px
+   - desktop:     ≥ 1200px
+   - wide:        ≥ 1400px
+   - ultrawide:   ≥ 1600px
+
+   IMPORTANTE: regras de altura do notebook
+   (max-height) ficam no style.css e não são
+   sobrescritas aqui para preservar o ajuste atual.
+   ========================================= */
+
+/* ---------- Base utilitária ---------- */
+.fab-chat {
+  right: max(1.25rem, env(safe-area-inset-right));
+  bottom: max(1.25rem, env(safe-area-inset-bottom));
+}
+
+/* =========================================
+   MOBILE — até 575px
+   ========================================= */
+@media (max-width: 575.98px) {
+  :root {
+    --header-h: 64px;
+  }
+
+  .header__inner {
+    width: 100%;
+    padding-inline: 0.85rem;
+    gap: 0.5rem;
+  }
+
+  .logo__img {
+    height: 40px;
+    max-width: 140px;
+  }
+
+  .nav-toggle {
+    display: grid;
+  }
+
+  .nav,
+  .header__actions {
+    display: none;
+  }
+
+  /* Menu mobile em painel único */
+  .header.is-open .header__inner {
+    flex-wrap: wrap;
+  }
+
+  .header.is-open .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    order: 3;
+    margin: 0.35rem 0 0;
+    padding: 0.65rem;
+    gap: 0.25rem;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid var(--linha);
+    border-radius: 14px;
+    box-shadow: var(--sombra);
+  }
+
+  .header.is-open .header__actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    order: 4;
+    margin: 0.45rem 0 0.35rem;
+    padding: 0;
+    gap: 0.45rem;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    position: static;
+  }
+
+  .header.is-open .header__actions .btn,
+  .header.is-open .header__actions .btn-login {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav__link {
+    font-size: 1rem;
+    padding: 0.75rem 0.85rem;
+  }
+
+  /* Hero mobile: layout próprio */
+  .hero {
+    min-height: calc(100svh - var(--header-h));
+    align-items: end;
+  }
+
+  .hero__img {
+    object-position: 68% 22%;
+  }
+
+  .hero__content {
+    width: calc(100% - 1.5rem);
+    margin: 0 0 0 0.85rem;
+    padding: 1rem 0 3.25rem;
+  }
+
+  .hero__brand {
+    font-size: 1.45rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .hero__title {
+    font-size: 1.55rem;
+    max-width: 16ch;
+    margin-bottom: 0.55rem;
+  }
+
+  .hero__lead {
+    font-size: 0.95rem;
+    max-width: 28ch;
+    margin-bottom: 1rem;
+  }
+
+  .hero__cta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.65rem;
+  }
+
+  .hero__cta .btn {
+    width: 100%;
+  }
+
+  .scroll-hint {
+    display: none;
+  }
+
+  /* Seções */
+  .section {
+    padding: 1.5rem 0;
+  }
+
+  .section__head {
+    margin-bottom: 1rem;
+  }
+
+  .section__head h2 {
+    font-size: 1.55rem;
+  }
+
+  .section__head p {
+    font-size: 0.98rem;
+  }
+
+  .section--assistant {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .section--assistant .container {
+    width: 100%;
+  }
+
+  .chat-preview {
+    width: 100%;
+    border-radius: 20px;
+    padding: 1rem;
+  }
+
+  .chat-preview__bar {
+    font-size: 1rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .chat-preview__msgs {
+    min-height: 180px;
+    gap: 0.85rem;
+  }
+
+  .chat-msg {
+    max-width: 100%;
+    gap: 0.5rem;
+  }
+
+  .chat-msg__avatar {
+    width: 38px;
+    height: 38px;
+  }
+
+  .bubble {
+    font-size: 0.95rem;
+    padding: 0.8rem 0.9rem;
+  }
+
+  /* Tradutor */
+  .section--clareza {
+    padding-top: 1.25rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .translator {
+    width: 100%;
+  }
+
+  .translator__stage {
+    border-radius: 18px;
+    padding: 1.15rem 1rem;
+    min-height: auto;
+  }
+
+  .translator__hard {
+    font-size: 1.15rem;
+    max-width: 100%;
+  }
+
+  .translator__easy {
+    font-size: 1.05rem;
+    max-width: 100%;
+  }
+
+  .translator__bridge {
+    margin: 0.9rem 0;
+  }
+
+  .translator__terms {
+    gap: 0.4rem;
+    margin-top: 0.9rem;
+  }
+
+  .translator__term {
+    font-size: 0.85rem;
+    padding: 0.55rem 0.75rem;
+  }
+
+  /* Benefícios */
+  .benefits {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .benefit {
+    grid-template-rows: 170px 1fr;
+  }
+
+  .benefit__body {
+    padding: 1.1rem 1.1rem 1.2rem;
+  }
+
+  .benefit__body h3 {
+    font-size: 1.25rem;
+  }
+
+  .benefit__body .btn {
+    align-self: stretch;
+    width: 100%;
+  }
+
+  .footer {
+    padding: 1.5rem 0 5rem;
+  }
+
+  .footer__logo {
+    height: 48px;
+  }
+
+  .fab-chat {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+/* =========================================
+   MOBILE GRANDE / PHABLET — 576px a 767px
+   ========================================= */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .nav-toggle {
+    display: grid;
+  }
+
+  .nav,
+  .header__actions {
+    display: none;
+  }
+
+  .header.is-open .header__inner {
+    flex-wrap: wrap;
+  }
+
+  .header.is-open .nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    order: 3;
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid var(--linha);
+    border-radius: 14px;
+    box-shadow: var(--sombra);
+  }
+
+  .header.is-open .header__actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    order: 4;
+    margin-top: 0.5rem;
+    gap: 0.5rem;
+    position: static;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .header.is-open .header__actions .btn,
+  .header.is-open .header__actions .btn-login {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero {
+    align-items: end;
+  }
+
+  .hero__img {
+    object-position: 65% 24%;
+  }
+
+  .hero__content {
+    width: min(520px, calc(100% - 2rem));
+    margin-left: 1.25rem;
+    padding: 1.25rem 0 3.5rem;
+  }
+
+  .hero__title {
+    font-size: clamp(1.7rem, 5vw, 2.2rem);
+    max-width: 16ch;
+  }
+
+  .hero__cta {
+    flex-wrap: wrap;
+  }
+
+  .scroll-hint {
+    display: none;
+  }
+
+  .benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .translator__hard {
+    max-width: 100%;
+  }
+
+  .translator__easy {
+    max-width: 100%;
+  }
+}
+
+/* =========================================
+   TABLET — 768px a 991px
+   ========================================= */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .nav-toggle {
+    display: grid;
+  }
+
+  .nav,
+  .header__actions {
+    display: none;
+  }
+
+  .header.is-open .header__inner {
+    flex-wrap: wrap;
+  }
+
+  .header.is-open .nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    order: 3;
+    margin-top: 0.55rem;
+    padding: 0.75rem;
+    gap: 0.35rem;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid var(--linha);
+    border-radius: 14px;
+    box-shadow: var(--sombra);
+  }
+
+  .header.is-open .header__actions {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    order: 4;
+    margin-top: 0.5rem;
+    gap: 0.65rem;
+    position: static;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .hero__img {
+    object-position: 60% 24%;
+  }
+
+  .hero__content {
+    width: min(560px, calc(100% - 2.5rem));
+    margin-left: 1.75rem;
+  }
+
+  .hero__title {
+    max-width: 15ch;
+  }
+
+  .benefits {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.1rem;
+  }
+
+  .benefit {
+    grid-template-rows: 180px 1fr;
+  }
+
+  .chat-preview {
+    width: min(720px, 100%);
+  }
+
+  .translator {
+    width: min(720px, 100%);
+  }
+}
+
+/* =========================================
+   LAPTOP / NOTEBOOK — 992px a 1199px
+   (não sobrescreve object-position/altura do style.css)
+   ========================================= */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+  }
+
+  .header__actions {
+    display: flex;
+  }
+
+  .header__inner {
+    width: min(1100px, calc(100% - 1.5rem));
+  }
+
+  .nav__link {
+    font-size: 0.86rem;
+    padding: 0.45rem 0.55rem;
+  }
+
+  .btn--sm {
+    font-size: 0.84rem;
+    padding: 0.55rem 0.85rem;
+  }
+
+  .hero__content {
+    width: min(680px, calc(100% - 2.5rem));
+  }
+
+  .container {
+    width: min(980px, calc(100% - 2rem));
+  }
+
+  .section--assistant .container {
+    width: min(1000px, calc(100% - 2rem));
+  }
+
+  .chat-preview {
+    width: min(920px, 100%);
+  }
+}
+
+/* =========================================
+   DESKTOP — 1200px a 1399px
+   ========================================= */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav,
+  .header__actions {
+    display: flex;
+  }
+
+  .container {
+    width: min(1120px, calc(100% - 2.5rem));
+  }
+
+  .section--assistant .container {
+    width: min(1180px, calc(100% - 2rem));
+  }
+
+  .chat-preview {
+    width: min(1040px, 100%);
+  }
+
+  .hero__content {
+    width: min(760px, calc(100% - 2.5rem));
+  }
+}
+
+/* =========================================
+   DESKTOP WIDE — ≥ 1400px
+   ========================================= */
+@media (min-width: 1400px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav,
+  .header__actions {
+    display: flex;
+  }
+
+  .header__inner {
+    width: min(1320px, calc(100% - 2rem));
+  }
+
+  .container {
+    width: min(1240px, calc(100% - 2.5rem));
+  }
+
+  .section--assistant .container {
+    width: min(1280px, calc(100% - 2rem));
+  }
+
+  .chat-preview {
+    width: min(1120px, 100%);
+  }
+
+  .translator {
+    width: min(960px, 100%);
+  }
+
+  .hero__content {
+    width: min(820px, calc(100% - 3rem));
+  }
+
+  .hero__brand {
+    font-size: clamp(1.7rem, 2.4vw, 2.6rem);
+  }
+
+  .hero__title {
+    font-size: clamp(2rem, 3vw, 3rem);
+  }
+
+  .benefits {
+    gap: 1.6rem;
+  }
+}
+
+/* =========================================
+   ULTRAWIDE — ≥ 1600px
+   ========================================= */
+@media (min-width: 1600px) {
+  .header__inner {
+    width: min(1480px, calc(100% - 2rem));
+  }
+
+  .container {
+    width: min(1320px, calc(100% - 3rem));
+  }
+
+  .section--assistant .container {
+    width: min(1360px, calc(100% - 2.5rem));
+  }
+
+  .chat-preview {
+    width: min(1180px, 100%);
+  }
+
+  .hero__content {
+    margin-left: clamp(2rem, 8vw, 6rem);
+  }
+}
+
+/* =========================================
+   Landscape phones — evita hero esticado demais
+   ========================================= */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding: 1.5rem 0 2rem;
+    align-items: center;
+  }
+
+  .hero__content {
+    padding: 0.5rem 0 1rem;
+  }
+
+  .hero__lead {
+    display: none;
+  }
+
+  .scroll-hint {
+    display: none;
+  }
+
+  .chat-preview__msgs {
+    min-height: 140px;
+  }
+}
+
+/* =========================================
+   Acessibilidade tátil — alvos maiores no toque
+   ========================================= */
+@media (hover: none) and (pointer: coarse) {
+  .btn,
+  .translator__term,
+  .nav__link,
+  .btn-login {
+    min-height: 44px;
+  }
+
+  .fab-chat {
+    width: 56px;
+    height: 56px;
+  }
+}

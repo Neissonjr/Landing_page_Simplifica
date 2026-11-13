@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simplifica Social — Seus direitos, sem burocracia</title>
+  <meta name="description" content="Assistente com IA e quiz guiado para descobrir benefícios sociais, INSS e direitos — feito para ser simples, inclusive para idosos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+
+  <header class="header" id="topo">
+    <div class="header__inner">
+      <a href="#topo" class="logo" aria-label="Simplifica Social — início">
+        <img src="assets/logo.png" alt="Simplifica Social" class="logo__img">
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="menu" aria-label="Menu principal">
+        <a href="#inicio" class="nav__link is-active">Início</a>
+        <a href="#clareza" class="nav__link">Sem burocracia</a>
+        <a href="#beneficios" class="nav__link">Benefícios sociais</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#conversa" class="btn btn--navy btn--sm" id="btnIniciarConversa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M8 10h8M8 14h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M21 12a8.5 8.5 0 0 1-12.4 7.5L3 21l1.6-4.2A8.5 8.5 0 1 1 21 12Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+          Iniciar conversa
+        </a>
+        <a href="#login" class="btn-login" id="btnLogin">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="2"/>
+            <path d="M5 19.5c1.8-3.2 4.2-4.5 7-4.5s5.2 1.3 7 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Login
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero__media" aria-hidden="true">
+        <img
+          src="https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=1920&q=80"
+          alt=""
+          class="hero__img"
+          id="heroImg"
+        >
+        <div class="hero__veil"></div>
+        <div class="hero__shapes">
+          <span class="blob blob--blue"></span>
+          <span class="blob blob--green"></span>
+          <span class="blob blob--yellow"></span>
+        </div>
+      </div>
+
+      <div class="hero__content">
+        <p class="hero__brand reveal">Simplifica Social</p>
+        <h1 class="hero__title reveal reveal-delay-1">
+          Descubra os benefícios sociais que podem ajudar você
+        </h1>
+        <p class="hero__lead reveal reveal-delay-2">
+          Conte um pouco sobre sua realidade e conheça<br>
+          possíveis benefícios para você e sua família.
+        </p>
+        <div class="hero__cta reveal reveal-delay-3">
+          <a href="#conversa" class="btn btn--green" id="btnDescobrir">Falar com o assistente</a>
+          <a href="#clareza" class="btn btn--yellow" id="btnComoFunciona">Ver sem burocracia</a>
+        </div>
+      </div>
+
+      <a href="#conversa" class="scroll-hint" aria-label="Rolar para baixo">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- Assistente IA — destaque logo após o hero -->
+    <section class="section section--assistant" id="conversa" aria-label="Assistente com IA">
+      <div class="container assistant">
+        <header class="section__head section__head--center reveal">
+          <h2>Assistente IA</h2>
+          <p>Converse com seu assistente virtual e tire dúvidas sobre benefícios</p>
+        </header>
+
+        <div class="chat-preview chat-preview--hero reveal" id="chatPreview">
+          <div class="chat-preview__bar">
+            <span class="chat-preview__dot"></span>
+            <strong>Assistente IA</strong>
+            <span class="chat-preview__status">online</span>
+          </div>
+          <div class="chat-preview__msgs" id="chatMsgs">
+            <div class="chat-msg chat-msg--bot">
+              <span class="chat-msg__avatar chat-msg__avatar--bot" aria-hidden="true">
+                <svg class="icon-robo" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 3v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <circle cx="12" cy="2.6" r="1.2" fill="currentColor"/>
+                  <rect x="5" y="6.5" width="14" height="11" rx="3.5" stroke="currentColor" stroke-width="1.8"/>
+                  <circle cx="9.2" cy="12" r="1.15" fill="currentColor"/>
+                  <circle cx="14.8" cy="12" r="1.15" fill="currentColor"/>
+                  <path d="M9 15.2h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M8.5 20.5h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <p class="bubble bubble--bot">Olá! Posso te ajudar a descobrir benefícios e tirar dúvidas sobre seus direitos.</p>
+            </div>
+
+            <div class="chat-msg chat-msg--user">
+              <p class="bubble bubble--user">Quais documentos preciso para o BPC?</p>
+              <span class="chat-msg__avatar chat-msg__avatar--user" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="2"/>
+                  <path d="M5 19.5c1.8-3.2 4.2-4.5 7-4.5s5.2 1.3 7 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+            </div>
+
+            <div class="chat-msg chat-msg--bot">
+              <span class="chat-msg__avatar chat-msg__avatar--bot" aria-hidden="true">
+                <svg class="icon-robo" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 3v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <circle cx="12" cy="2.6" r="1.2" fill="currentColor"/>
+                  <rect x="5" y="6.5" width="14" height="11" rx="3.5" stroke="currentColor" stroke-width="1.8"/>
+                  <circle cx="9.2" cy="12" r="1.15" fill="currentColor"/>
+                  <circle cx="14.8" cy="12" r="1.15" fill="currentColor"/>
+                  <path d="M9 15.2h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M8.5 20.5h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <p class="bubble bubble--bot">Vou te orientar passo a passo, com linguagem simples. Se preferir, também temos o quiz.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--clareza" id="clareza">
+      <div class="container">
+        <header class="section__head section__head--center reveal">
+          <h2>A gente traduz a burocracia</h2>
+          <p>Toque em um termo difícil e veja o que ele significa de verdade.</p>
+        </header>
+
+        <div class="translator reveal" id="translator">
+          <div class="translator__stage" aria-live="polite">
+            <p class="translator__tag">Linguagem do governo</p>
+            <p class="translator__hard" id="translatorHard">Benefício de Prestação Continuada (BPC)</p>
+
+            <div class="translator__bridge" aria-hidden="true">
+              <span class="translator__line"></span>
+              <span class="translator__badge">Simplifica</span>
+              <span class="translator__line"></span>
+            </div>
+
+            <p class="translator__easy" id="translatorEasy">Um apoio em dinheiro todo mês para idosos a partir de 65 anos ou pessoas com deficiência, quando a renda da família é baixa.</p>
+          </div>
+
+          <div class="translator__terms" role="list" aria-label="Termos para traduzir">
+            <button type="button" class="translator__term is-active" role="listitem" data-i="0">BPC</button>
+            <button type="button" class="translator__term" role="listitem" data-i="1">CadÚnico</button>
+            <button type="button" class="translator__term" role="listitem" data-i="2">INSS</button>
+            <button type="button" class="translator__term" role="listitem" data-i="3">Renda per capita</button>
+            <button type="button" class="translator__term" role="listitem" data-i="4">LOAS</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section section--benefits" id="beneficios">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2>Benefícios sociais</h2>
+          <p>Conheça programas que podem fazer diferença na vida da sua família.</p>
+        </header>
+
+        <div class="benefits">
+          <article class="benefit reveal" tabindex="0">
+            <div class="benefit__visual">
+              <img
+                src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?auto=format&fit=crop&w=900&q=80"
+                alt="Família com crianças"
+              >
+            </div>
+            <div class="benefit__body">
+              <h3>Bolsa Família</h3>
+              <p>Entenda critérios de renda, cadastro e como acompanhar o pagamento do programa.</p>
+              <a href="#beneficios-todos" class="btn btn--navy btn--sm btn-ver-beneficios">Ver todos os benefícios</a>
+            </div>
+          </article>
+
+          <article class="benefit reveal reveal-delay-1" tabindex="0">
+            <div class="benefit__visual">
+              <img
+                src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=900&q=80"
+                alt="Apoio a pessoa idosa"
+              >
+            </div>
+            <div class="benefit__body">
+              <h3>BPC</h3>
+              <p>Saiba quem pode solicitar o Benefício de Prestação Continuada e quais documentos reunir.</p>
+              <a href="#beneficios-todos" class="btn btn--navy btn--sm btn-ver-beneficios">Ver todos os benefícios</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <img src="assets/logo.png" alt="Simplifica Social" class="footer__logo">
+      <p>Ajudando cidadãos a entender seus direitos — com clareza e respeito.</p>
+      <p class="footer__copy">&copy; <span id="year"></span> Simplifica Social</p>
+    </div>
+  </footer>
+
+  <button type="button" class="fab-chat" id="fabChat" aria-label="Abrir assistente virtual">
+    <span class="fab-chat__pulse" aria-hidden="true"></span>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M8 10h8M8 14h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M21 12a8.5 8.5 0 0 1-12.4 7.5L3 21l1.6-4.2A8.5 8.5 0 1 1 21 12Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <!-- Destinos placeholder: redirecionamentos virão depois -->
+  <div id="login" hidden></div>
+  <div id="beneficios-todos" hidden></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
